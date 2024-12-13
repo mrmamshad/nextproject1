@@ -28,8 +28,8 @@ export default function NavbarExample() {
   console.log("Session data on the client:", session);
 
   return (
-    <div className="px-10 bg-white/80 shadow-sm">
-      <nav className="flex justify-between items-center border-b-2 font-semibold py-4">
+    <div className="px-20 py-4  shadow-sm">
+      <nav className="flex justify-between items-center border-b    dark:border-white/10 font-semibold  dark:text-white py-4">
         <div className="flex">
           {/* Use Next.js Link for navigation without an <a> tag */}
           <Link href="/" className="flex items-center">
@@ -61,9 +61,9 @@ export default function NavbarExample() {
           <div>
             {/* Conditionally render components based on user session */}
             {session?.user ? (
-              <ProfileDropdown  image={image} name={name} email={email} />
+              <ProfileDropdown image={image} name={name} email={email} />
             ) : (
-              <div className="mt-3 ml-3 " >
+              <div className="mt-3 ml-3 ">
                 <LoginForm />
               </div>
             )}

@@ -39,7 +39,7 @@ export default function ProfileDropdown( {image, name, email}  ) {
       {/* Profile icon with rounded image */}
       <button
         onClick={toggleDropdown}
-        className="flex border px-3 py-2 rounded-[20px] shadow-sm items-center space-x-2"
+        className="flex  px-3 py-2 rounded-[20px] shadow-sm items-center space-x-2"
       >
         <Image
           src={image}
