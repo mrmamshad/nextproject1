@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavbarExample from "./components/Navber";
 import { SessionProvider } from "next-auth/react";
+import 'easymde/dist/easymde.min.css';
 
 
 const geistSans = Geist({
