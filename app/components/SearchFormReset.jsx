@@ -1,25 +1,21 @@
-"use client";
-import React from "react";
+"use client"
+
 import Link from "next/link";
-import { TiCancel } from "react-icons/ti";
-import { X } from "lucide-react";
+import {X} from "lucide-react";
 
 const SearchFormReset = () => {
-  const handleReset = () => {
-    const input = document.querySelector("input[name='query']");
-    if (input) {
-      input.value = ""; // Clear the input field
+    const reset = () => {
+        const form = document.querySelector('.search-form') ;
+
+        if(form) form.reset();
     }
-    window.history.replaceState({}, document.title, "/"); // Clear URL query
-  };
 
-  return (
-    <button type="reset" onClick={handleReset}>
-      <Link href="/" className="    ">
-        <X size={28} />
-      </Link>
-    </button>
-  );
-};
-
-export default SearchFormReset;
+    return (
+        <button type="reset" onClick={reset}>
+            <Link href="/" className="search-btn ">
+                <X className="size-5" />
+            </Link>
+        </button>
+    )
+}
+export default SearchFormReset

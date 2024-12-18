@@ -28,7 +28,7 @@ export default function NavbarExample() {
   console.log("Session data on the client:", session);
 
   return (
-    <div className="px-20 py-4  shadow-sm">
+    <div className="px-20 py-3  shadow-sm">
       <nav className="flex justify-between items-center border-b    dark:border-white/10 font-semibold  dark:text-white py-4">
         <div className="flex">
           {/* Use Next.js Link for navigation without an <a> tag */}

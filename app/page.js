@@ -5,11 +5,13 @@ import { STARTUPS_QUERY } from "../sanity/lib/query";
 import { sanityFetch, SanityLive } from "../sanity/lib/live";
 
 export default async function Home({ searchParams }) {
-  const query = searchParams.query;
-  // Fetch all startups
-  // const post = await client.fetch(STARTUPS_QUERY);
-  const {data: post} = await sanityFetch({
-    query: STARTUPS_QUERY,});
+  const query = searchParams.query || ''; // Ensure query is an empty string if undefined
+  const params = { search: query || null }; // Updated naming for clarity
+
+  const { data: post } = await sanityFetch({
+    query: STARTUPS_QUERY,
+    params // Pass search parameter
+  });
 
   return (
     <>
@@ -26,7 +28,7 @@ export default async function Home({ searchParams }) {
 
       <section>
         <p className="text-xl py-2 line-clamp-2 font-semibold px-20 text-start">
-          All Startups
+        {query ? `Search results for "${query}"` : "All Startups"}
         </p>
 
         {/* Render Startup Posts */}
