@@ -9,7 +9,7 @@ export default function SearchBox({ query }) {
 
   return (
     <Form
-      action={`/`}
+      action={`/`}  
       scroll={false}
       className="relative search-form w-full max-w-md mx-auto"
     >
