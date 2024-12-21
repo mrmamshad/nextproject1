@@ -1,4 +1,4 @@
-import { withSentryConfig } from '@sentry/nextjs';
+import { withSentryConfig } from "@sentry/nextjs";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -6,34 +6,43 @@ const nextConfig = {
     dangerouslyAllowSVG: true,
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'lh3.googleusercontent.com', // Google Avatars
+        protocol: "https",
+        hostname: "lh3.googleusercontent.com", // Google Avatars
       },
       {
-        protocol: 'https',
-        hostname: 'avatars.githubusercontent.com', // Public GitHub Avatars
+        protocol: "https",
+        hostname: "avatars.githubusercontent.com", // Public GitHub Avatars
       },
       {
-        protocol: 'https',
-        hostname: 'private-avatars.githubusercontent.com', // Private GitHub Avatars
+        protocol: "https",
+        hostname: "private-avatars.githubusercontent.com", // Private GitHub Avatars
       },
       {
-        protocol: 'https',
-        hostname: 'images.unsplash.com', // Unsplash images
+        protocol: "https",
+        hostname: "images.unsplash.com", // Unsplash images
       },
       {
-        protocol: 'https',
-        hostname: 'placehold.co',
+        protocol: "https",
+        hostname: "placehold.co",
       },
       {
-        protocol: 'https',
-        hostname: 'i.ibb.co.com', // Correct hostname for i.ibb.co images
+        protocol: "https",
+        hostname: "i.ibb.co.com", // Correct hostname for i.ibb.co images
       },
       {
-        protocol: 'https',
-        hostname: 'plus.unsplash.com', // Plus Unsplash images
+        protocol: "https",
+        hostname: "plus.unsplash.com", // Plus Unsplash images
       },
     ],
+  },
+  experimental: {
+    ppr: "incremental",
+    after:true, 
+  },
+  devIndicators: {
+    appIsrStatus: true,
+    buildActivity: true,
+    buildActivityPosition: "bottom-right",
   },
 };
 
